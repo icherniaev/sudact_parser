@@ -1,0 +1,9 @@
+from my_paraser import parser
+from utilities import link_generator
+import pandas as pd
+
+urls = link_generator()
+df = pd.DataFrame(columns=['case_num', 'judge_name', 'name', 'date', 'articles', 'result'])
+
+#insert the url from which you want to start parsing
+parser(urls[0], 0)
